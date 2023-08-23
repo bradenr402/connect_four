@@ -84,7 +84,7 @@ describe Game do
       end
 
       it "announces player's name" do
-        expect(end_game).to receive(:puts).with("\e[35mButch\e[0m wins!")
+        expect(end_game).to receive(:puts).with("  \e[35mButch\e[0m wins!")
         end_game.game_over?(player)
       end
     end
@@ -99,7 +99,7 @@ describe Game do
       end
 
       it 'prints Draw!' do
-        expect(game_draw).to receive(:puts).with('Draw!')
+        expect(game_draw).to receive(:puts).with('  Draw!')
         game_draw.draw?
       end
     end
